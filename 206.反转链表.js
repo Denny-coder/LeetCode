@@ -22,7 +22,7 @@ var reverseList = function (head) {
   }
   var tail = head.next;
   var result = reverseList(head.next);
-  head.next = null;
+  head.next = tail.next;
   tail.next = head;
   return result;
 };
